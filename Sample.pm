@@ -4,11 +4,14 @@ package Algorithm::Numerical::Sample;
 #
 # $Author: abigail $
 #
-# $Date: 1999/03/01 21:06:07 $
+# $Date: 1999/08/09 08:01:05 $
 #
-# $Id: Sample.pm,v 1.2 1999/03/01 21:06:07 abigail Exp abigail $
+# $Id: Sample.pm,v 1.3 1999/08/09 08:01:05 abigail Exp abigail $
 #
 # $Log: Sample.pm,v $
+# Revision 1.3  1999/08/09 08:01:05  abigail
+# Changed *all* occurences of Algorithms to Algorithm.
+#
 # Revision 1.2  1999/03/01 21:06:07  abigail
 # Changed package to Algorithm::*
 #
@@ -29,7 +32,7 @@ use vars qw /$VERSION @ISA @EXPORT @EXPORT_OK/;
 @EXPORT    = qw //;
 @EXPORT_OK = qw /sample/;
 
-($VERSION) = '$Revision: 1.2 $' =~ /(\d+\.\d+)/;
+($VERSION) = '$Revision: 1.3 $' =~ /(\d+\.\d+)/;
 
 
 my @PARAMS = qw /set sample_size/;
@@ -76,7 +79,7 @@ sub sample {
 
 
 
-package Algorithms::Numerical::Sample::Stream;
+package Algorithm::Numerical::Sample::Stream;
 
 use strict;
 
@@ -140,16 +143,16 @@ __END__
 
 =head1 NAME
 
-Algorithms::Numerical::Sample - Draw samples from a set
+Algorithm::Numerical::Sample - Draw samples from a set
 
 =head1 SYNOPSIS
 
-    use Algorithms::Numerical::Sample  qw /sample/;
+    use Algorithm::Numerical::Sample  qw /sample/;
 
     @sample = sample (-set         => [1 .. 10000],
                       -sample_size => 100);
 
-    $sampler = Algorithms::Numerical::Sample::Stream -> new;
+    $sampler = Algorithm::Numerical::Sample::Stream -> new;
     while (<>) {$sampler -> data ($_)}
     $random_line = $sampler -> extract;
 
@@ -168,9 +171,9 @@ C<set> and C<sample_size> may be preceeded with an optional C<->.
 The function returns the sample list, or a reference to the sample
 list, depending on the context.
 
-=head2 B<B>: C<Algorithms::Numerical::Sample::Stream>
+=head2 B<B>: C<Algorithm::Numerical::Sample::Stream>
 
-The class C<Algorithms::Numerical::Sample::Stream> has the following
+The class C<Algorithm::Numerical::Sample::Stream> has the following
 methods:
 
 =over
@@ -178,7 +181,7 @@ methods:
 =item C<new>
 
 This function returns an object of the
-C<Algorithms::Numerical::Sample::Stream> class.
+C<Algorithm::Numerical::Sample::Stream> class.
 It will take an optional argument of the form
 C<sample_size =E<gt> EXPR>, where C<EXPR> evaluates to the
 sample size to be taken. If this argument is missing,
@@ -254,9 +257,12 @@ Reading: Addison-Wesley, 1997. ISBN: 0-201-89684-2.
 
 =head1 HISTORY
 
-    $Date: 1999/03/01 21:06:07 $
+    $Date: 1999/08/09 08:01:05 $
 
     $Log: Sample.pm,v $
+    Revision 1.3  1999/08/09 08:01:05  abigail
+    Changed *all* occurences of Algorithms to Algorithm.
+
     Revision 1.2  1999/03/01 21:06:07  abigail
     Changed package to Algorithm::*
 
