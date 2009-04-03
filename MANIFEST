@@ -4,3 +4,4 @@ MANIFEST
 Makefile.PL
 lib/Algorithm/Numerical/Sample.pm
 t/000_tests.t
+README
