@@ -1,39 +1,17 @@
 package Algorithm::Numerical::Sample;
 
-################################################################################
-#
-# $Author: abigail $
-#
-# $Date: 1999/08/09 08:01:05 $
-#
-# $Id: Sample.pm,v 1.3 1999/08/09 08:01:05 abigail Exp abigail $
-#
-# $Log: Sample.pm,v $
-# Revision 1.3  1999/08/09 08:01:05  abigail
-# Changed *all* occurences of Algorithms to Algorithm.
-#
-# Revision 1.2  1999/03/01 21:06:07  abigail
-# Changed package to Algorithm::*
-#
-# Revision 1.1  1998/04/29 03:05:57  abigail
-# Initial revision
-#
-#
-#
-################################################################################
+use 5.006;
 
 use strict;
-use Exporter;
+use warnings;
+no  warnings 'syntax';
+use Exporter ();
 
+our @ISA       = qw /Exporter/;
+our @EXPORT    = qw //;
+our @EXPORT_OK = qw /sample/;
 
-use vars qw /$VERSION @ISA @EXPORT @EXPORT_OK/;
-
-@ISA       = qw /Exporter/;
-@EXPORT    = qw //;
-@EXPORT_OK = qw /sample/;
-
-($VERSION) = '$Revision: 1.3 $' =~ /(\d+\.\d+)/;
-
+out $VERSION   = '2009040301';
 
 my @PARAMS = qw /set sample_size/;
 sub sample {
@@ -255,46 +233,35 @@ Reading: Addison-Wesley, 1997. ISBN: 0-201-89684-2.
 
 =back
 
-=head1 HISTORY
-
-    $Date: 1999/08/09 08:01:05 $
-
-    $Log: Sample.pm,v $
-    Revision 1.3  1999/08/09 08:01:05  abigail
-    Changed *all* occurences of Algorithms to Algorithm.
-
-    Revision 1.2  1999/03/01 21:06:07  abigail
-    Changed package to Algorithm::*
-
-    Revision 1.1  1998/04/29 03:05:57  abigail
-    Initial revision
-
+=head1 DEVELOPMENT
+ 
+The current sources of this module are found on github,
+L<< git://github.com/Abigail/algorithms--numerical--sample.git >>.
 
 =head1 AUTHOR
 
-This package was written by Abigail.
+This package was written by Abigail, L<< cpan@abigail.be >>.
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT and LICENSE
 
-Copyright 1998, 1999 by Abigail.
+Copyright (C) 1998, 1999, 2009, Abigail.
 
-=head1 LICENSE
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This package is free and open software.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-You may use, copy, modify, distribute and sell this package or any
-modifications there of in any form you wish, provided you do not do any
-of the following:
-
-    - claim that any of the original code was written by someone
-      else than the original author(s).
-    - restrict someone in using, copying, modifying, distributing or
-      selling this program or module or any modifications of it.
-
-
-THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
-WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
-MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 =cut
-
