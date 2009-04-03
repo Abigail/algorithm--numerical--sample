@@ -236,7 +236,7 @@ Reading: Addison-Wesley, 1997. ISBN: 0-201-89684-2.
 =head1 DEVELOPMENT
  
 The current sources of this module are found on github,
-L<< git://github.com/Abigail/algorithms--numerical--sample.git >>.
+L<< git://github.com/Abigail/algorithm--numerical--sample.git >>.
 
 =head1 AUTHOR
 
