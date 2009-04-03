@@ -1,14 +1,17 @@
-package Algorithms::Numerical::Sample;
+package Algorithm::Numerical::Sample;
 
 ################################################################################
 #
 # $Author: abigail $
 #
-# $Date: 1998/04/29 03:05:57 $
+# $Date: 1999/03/01 21:06:07 $
 #
-# $Id: Sample.pm,v 1.1 1998/04/29 03:05:57 abigail Exp $
+# $Id: Sample.pm,v 1.2 1999/03/01 21:06:07 abigail Exp abigail $
 #
 # $Log: Sample.pm,v $
+# Revision 1.2  1999/03/01 21:06:07  abigail
+# Changed package to Algorithm::*
+#
 # Revision 1.1  1998/04/29 03:05:57  abigail
 # Initial revision
 #
@@ -26,7 +29,7 @@ use vars qw /$VERSION @ISA @EXPORT @EXPORT_OK/;
 @EXPORT    = qw //;
 @EXPORT_OK = qw /sample/;
 
-($VERSION) = '$Revision: 1.1 $' =~ /(\d+\.\d+)/;
+($VERSION) = '$Revision: 1.2 $' =~ /(\d+\.\d+)/;
 
 
 my @PARAMS = qw /set sample_size/;
@@ -251,9 +254,12 @@ Reading: Addison-Wesley, 1997. ISBN: 0-201-89684-2.
 
 =head1 HISTORY
 
-    $Date: 1998/04/29 03:05:57 $
+    $Date: 1999/03/01 21:06:07 $
 
     $Log: Sample.pm,v $
+    Revision 1.2  1999/03/01 21:06:07  abigail
+    Changed package to Algorithm::*
+
     Revision 1.1  1998/04/29 03:05:57  abigail
     Initial revision
 
@@ -264,10 +270,25 @@ This package was written by Abigail.
 
 =head1 COPYRIGHT
 
-Copyright 1998 by Abigail.
+Copyright 1998, 1999 by Abigail.
 
-You may use, distribute and modify this package under the same
-terms as Perl.
+=head1 LICENSE
+
+This package is free and open software.
+
+You may use, copy, modify, distribute and sell this package or any
+modifications there of in any form you wish, provided you do not do any
+of the following:
+
+    - claim that any of the original code was written by someone
+      else than the original author(s).
+    - restrict someone in using, copying, modifying, distributing or
+      selling this program or module or any modifications of it.
+
+
+THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut
 
