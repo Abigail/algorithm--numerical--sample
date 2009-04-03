@@ -2,5 +2,5 @@ Changes
 LICENSE
 MANIFEST
 Makefile.PL
-lib/Algorithms/Numerical/Sample.pm
+lib/Algorithm/Numerical/Sample.pm
 t/000_tests.t
