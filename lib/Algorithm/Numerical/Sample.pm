@@ -11,7 +11,7 @@ our @ISA       = qw /Exporter/;
 our @EXPORT    = qw //;
 our @EXPORT_OK = qw /sample/;
 
-our $VERSION   = '2009040301';
+our $VERSION   = '2009102701';
 
 my @PARAMS = qw /set sample_size/;
 sub sample {
