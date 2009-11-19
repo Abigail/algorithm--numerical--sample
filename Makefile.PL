@@ -8,21 +8,51 @@ no  warnings 'syntax';
 
 use ExtUtils::MakeMaker;
 
+my  $PACKAGE      =  'Algorithm::Numerical::Sample';
+
+my  $LIB_FILE     =  "lib/$PACKAGE.pm";
+    $LIB_FILE     =~  s!::!/!g;
+my  $LOCAL_ADDR   =  'cpan';
+my  $DOMAIN       =  'abigail.be';
+my  $REPO         =   $PACKAGE;
+    $REPO         =~  s!::!--!g;
+my  $REPO_HOST    =  'github.com';
+my  $ME           =  'Abigail';
+my  $REPOSITORY   =  "git://$REPO_HOST/$ME/\L$REPO.git";
+
+
 my %args = (
-    NAME                 =>  'Algorithm::Numerical::Sample',
-    VERSION_FROM         =>  'lib/Algorithm/Numerical/Sample.pm',
-    ABSTRACT_FROM        =>  'lib/Algorithm/Numerical/Sample.pm',
+    NAME                 =>  $PACKAGE,
+    VERSION_FROM         =>  $LIB_FILE,
+    ABSTRACT_FROM        =>  $LIB_FILE,
+    PREREQ_PM            => {
+        'strict'             =>  0,
+        'warnings'           =>  0,
+        'Exporter'           =>  0,
+    },
     MIN_PERL_VERSION     =>   5.006,
-    AUTHOR               =>  'Abigail <cpan@abigail.be>',
+    AUTHOR               =>  "$ME <$LOCAL_ADDR\@$DOMAIN>",
     LICENSE              =>  'mit',
     META_MERGE           => {
-        resources        => {
-            repository   => 
-                'git://github.com/Abigail/algorithm--numerical--sample.git',
+        test_requires    => {
+            'strict'             => 0,
+            'warnings'           => 0,
+            'Test::More'         => 0.88,
         },
-        keywords         => [qw [algorithm numerical sample]],
+        resources        => {
+            repository   => $REPOSITORY,
+        },
+        keywords         => [qw [ ]],
     },
 );
+
+$args {META_MERGE} {build_requires} ||= {
+    'ExtUtils::MakeMaker' =>  0,
+    %{$args {META_MERGE} {test_requires}}
+};
+
+$args {META_MERGE} {configure_requires} ||=
+    $args {META_MERGE} {build_requires};
 
 my %filter = (
     MIN_PERL_VERSION     => '6.48',
