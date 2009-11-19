@@ -1,6 +1,7 @@
 Version 2009112001
 + POD and Kwalitee tests.
 + Even moderner Makefile.PL.
++ Test::NoWarnings.
 
 Version 2009102701
 + Modernized Makefile.PL.
