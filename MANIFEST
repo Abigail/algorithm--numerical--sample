@@ -6,5 +6,4 @@ t/000_basic.t
 t/100_historic.t
 t/950_pod.t
 t/960_pod_coverage.t
-t/990_kwalitee.t
 README

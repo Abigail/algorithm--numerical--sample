@@ -1,3 +1,6 @@
+Version 2010011201 Tue Jan 12 15:49:54 CET 2010
++ Disable Kwalitee tests
+
 Version 2009112001
 + POD and Kwalitee tests.
 + Even moderner Makefile.PL.
